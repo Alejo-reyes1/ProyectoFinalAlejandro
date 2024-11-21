@@ -1,0 +1,30 @@
+package Clases;
+
+import java.time.LocalDate;
+
+public class Revista extends MaterialBiblioteca{
+	private int numeroEdicion;
+
+	public Revista(String titulo, LocalDate añoPublicacion, int numeroDePaginas, int numeroEdicion) {
+		super(titulo, añoPublicacion, numeroDePaginas);
+		this.numeroEdicion = numeroEdicion;
+	}
+
+	public int getNumeroEdicion() {
+		return numeroEdicion;
+	}
+
+	public void setNumeroEdicion(int numeroEdicion) {
+		this.numeroEdicion = numeroEdicion;
+	}
+
+	@Override
+	public int calcularMulta(int diasRetraso) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
+
+}

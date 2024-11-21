@@ -1,0 +1,43 @@
+package Main;
+
+import javax.swing.JOptionPane;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int opcionMenu;
+		String menuPrincipal = "Menu principal\n"+
+		"Ingrese la opcion correspondiente:\n"+
+		"1.Agregar material\n"+
+		"2.prestar material\n"+
+		"3.devolver material\n"+
+		"4.calcular multas por retraso\n"+
+		"5.muestre los detalles de los materiales\n"+
+		"6.multastotales acumuladas\n"+
+		"7.multas de un usuario\n"+
+		"8.agregar usuario";
+		int opcionSeleccionada = 0;	
+		
+		
+		do {
+			opcionSeleccionada = Integer.parseInt(JOptionPane.showInputDialog(null,menuPrincipal));
+			opcionMenu(opcionSeleccionada);
+		} while (opcionSeleccionada != 9);
+		
+	}
+
+	private static void opcionMenu(int opcionSeleccionada) {
+		switch (opcionSeleccionada) {
+		case 1:
+			agregarMaterial();
+			break;
+			
+		}
+		
+	}
+
+	private static void agregarMaterial() {
+		
+	}
+
+}

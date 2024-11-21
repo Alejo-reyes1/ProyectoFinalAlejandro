@@ -1,0 +1,46 @@
+package Clases;
+
+import java.util.ArrayList;
+
+public class Biblioteca implements Prestamo {
+	private String nombre;
+	private ArrayList<MaterialBiblioteca>invetario;
+	private ArrayList<Usuario>usuario;
+	public Biblioteca(String nombre) {
+		super();
+		this.nombre = nombre;
+		this.invetario =new ArrayList<>();
+		this.usuario=new ArrayList<>();
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public ArrayList<MaterialBiblioteca> getInvetario() {
+		return invetario;
+	}
+	public void setInvetario(ArrayList<MaterialBiblioteca> invetario) {
+		this.invetario = invetario;
+	}
+	public boolean agregarMaterial(MaterialBiblioteca material) {
+		this.invetario.add(material);
+		return true;
+	}
+	public MaterialBiblioteca buscarMaterial(String titulo, String autor) {
+		for(MaterialBiblioteca m:this.invetario) {
+			if(m.getTitulo().equalsIgnoreCase(titulo)&&((Libro)m).getAutor().equalsIgnoreCase(autor)) {
+				return m;
+			}
+		}
+		return null;
+	}
+	public boolean prestarMaterial() {
+		
+	}
+	
+	
+	
+
+}

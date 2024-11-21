@@ -1,0 +1,37 @@
+package Clases;
+
+import java.util.ArrayList;
+
+public class Biblioteca {
+	private String nombre;
+	private ArrayList<MaterialBiblioteca>invetario;
+	public Biblioteca(String nombre) {
+		super();
+		this.nombre = nombre;
+		this.invetario =new ArrayList<>();
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public ArrayList<MaterialBiblioteca> getInvetario() {
+		return invetario;
+	}
+	public void setInvetario(ArrayList<MaterialBiblioteca> invetario) {
+		this.invetario = invetario;
+	}
+	public boolean agregarMaterial(MaterialBiblioteca material) {
+		this.invetario.add(material);
+		return true;
+	}
+	public MaterialBiblioteca buscarMaterial(String titulo, String autor) {
+		
+		
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,54 @@
+package Main;
+
+import javax.swing.JOptionPane;
+
+import Clases.Revista;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int opcionMenu;
+		String menuPrincipal = "Menu principal\n"+
+		"Ingrese la opcion correspondiente:\n"+
+		"1.Agregar material\n"+
+		"2.prestar material\n"+
+		"3.devolver material\n"+
+		"4.calcular multas por retraso\n"+
+		"5.muestre los detalles de los materiales\n"+
+		"6.multastotales acumuladas\n"+
+		"7.multas de un usuario\n"+
+		"8.agregar usuario";
+		int opcionSeleccionada = 0;	
+		
+		
+		do {
+			opcionSeleccionada = Integer.parseInt(JOptionPane.showInputDialog(null,menuPrincipal));
+			opcionMenu(opcionSeleccionada);
+		} while (opcionSeleccionada != 9);
+		
+	}
+
+	private static void opcionMenu(int opcionSeleccionada) {
+		switch (opcionSeleccionada) {
+		case 1:
+			agregarMaterial();
+			break;
+			
+		}
+		
+	}
+
+	private static void agregarMaterial() {
+		int tipoMaterial=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el material que desea agregar\n 1.Revista\n2.Libro"));
+		if(tipoMaterial==1) {
+			String titulo=JOptionPane.showInputDialog("Ingrese el titulo de la revista");
+			int añoPublicacion=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de publicacion de la revista"));
+			int numeroPaginas=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de paginas de la revista"));
+			int numeroEdicion=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de edicion de la revista"));
+			Revista r=new Revista(titulo,añoPublicacion,numeroPaginas,numeroEdicion);
+			
+			
+		}
+	}
+
+}

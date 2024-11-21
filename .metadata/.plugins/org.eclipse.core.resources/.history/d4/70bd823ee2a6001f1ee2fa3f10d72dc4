@@ -1,0 +1,35 @@
+package Clases;
+
+import java.time.LocalDate;
+
+public class Libro extends MaterialBiblioteca implements Prestamo{
+	private String autor;
+	public Libro(String titulo, int añoPublicacion, int numeroDePaginas, String autor) {
+		super(titulo, añoPublicacion, numeroDePaginas);
+		this.autor = autor;
+	}
+	public String getAutor() {
+		return autor;
+	}
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+	@Override
+	public int calcularMulta(int diasRetraso) {
+		int precioMulta=2000*diasRetraso;
+		return precioMulta;
+	}
+	@Override
+	public boolean prestar(String nombreUsuario) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean devolver() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+
+}

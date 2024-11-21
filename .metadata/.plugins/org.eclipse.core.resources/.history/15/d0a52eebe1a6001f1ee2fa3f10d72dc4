@@ -1,0 +1,25 @@
+package Clases;
+
+import java.time.LocalDate;
+
+public class Libro extends MaterialBiblioteca{
+	private String autor;
+	public Libro(String titulo, LocalDate añoPublicacion, int numeroDePaginas, String autor) {
+		super(titulo, añoPublicacion, numeroDePaginas);
+		this.autor = autor;
+	}
+	public String getAutor() {
+		return autor;
+	}
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+	@Override
+	public int calcularMulta(int diasRetraso) {
+		int precioMulta=2000*diasRetraso;
+		return precioMulta;
+	}
+	
+	
+
+}
